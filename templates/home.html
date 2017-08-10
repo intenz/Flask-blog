@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Welcome To FlaskApp</h1>
+    <p class="lead">You want to develop an application with Python and Flask? Here you have the chance to learn by example. In this tutorial, we will create a simple microblogging application. It only supports one user that can create text-only entries and there are no feeds or comments, but it still features everything you need to get started. We will use Flask and SQLite as a database (which comes out of the box with Python) so there is nothing else you need. </p>
+     <a class="btn btn-success" href="/articles">Read blog in articles <i class="fa fa-paper-plane"></i></a>
+     <hr>
+    {% if session.logged_in == NULL %}
+      <a href="/register" class="btn btn-primary btn-lg">Register</a>
+      <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+  </div>
+{% endblock %}
